@@ -20,8 +20,9 @@ export default function AddTask({ formData, setFormData, setTask }) {
       loadData();
     }, 3000);
 
-    return () => {clearTimeout(timer);}
-    
+    return () => {
+      clearTimeout(timer);
+    };
   }, [formData]);
 
   const handleSubmit = async (e) => {

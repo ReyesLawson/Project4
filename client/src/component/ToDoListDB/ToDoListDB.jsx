@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from "react";
 import { Button, Form, Container } from "react-bootstrap";
+import Row from 'react-bootstrap/Row';
 import Table from "react-bootstrap/Table";
 import axios from "axios";
+
 
 export const fetchList = async () => {
   try {
@@ -15,11 +17,6 @@ export const fetchList = async () => {
 };
 
 export const ToDoListDB = ({task, setTask}) => {
-  // const [task, setTask] = useState([]);
-
-  useEffect(() => {
-    console.log(task);
-  },[])
 
   useEffect(() => {
     console.log("Fetching tasks on initial load");
@@ -28,32 +25,14 @@ export const ToDoListDB = ({task, setTask}) => {
     setTask(loadedTask);
     }
     loadData();
-    // fetchList()
-  }, []);
+    
+  }, [setTask]);
 
-  // const fetchList = async () => {
-  //   try{
-  //       const response = await axios.get ("http://localhost:3002/tasks/")
-  //       console.log ("Fetching Data from DB successfully")
-  //       console.log (response)
-  //       setTask(response.data)
-  //   }
-  //   catch(error){
-  //       console.log ("Error fetching Tasks")
-  //   }
-  // }
 
   const handleDelete = async (taskid) => {
-    try {
-      console.log(`http://localhost:3002/tasks/${taskid}`);
-      const response = await axios.delete(
-        `http://localhost:3002/tasks/${taskid}`
-      );
-      console.log("task was deleted");
-      fetchList();
-    } catch (err) {
-      console.log("error");
-    }
+    await axios.delete (`http://localhost:3002/tasks/${taskid}`);
+      const updatedTasks = await fetchList();
+      setTask(updatedTasks);
   };
 
   
@@ -62,6 +41,7 @@ export const ToDoListDB = ({task, setTask}) => {
     <>
       <h1>List of ToDos</h1>
       <Table striped bordered hover>
+        <div>home</div>
         <thead>
           <tr>
             <th>Task ID</th>
@@ -69,7 +49,7 @@ export const ToDoListDB = ({task, setTask}) => {
           </tr>
         </thead>
         <tbody>
-          {task.map((task, index) => {
+          {task.map((task) => {
             return (
               <tr key={task.taskid}>
                 <td>{task.taskid}</td>

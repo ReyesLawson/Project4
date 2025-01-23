@@ -1,5 +1,8 @@
 import mysql from 'mysql2'
 
+
+
+
 const db = mysql.createConnection ({
     host: 'localhost',
     user: 'root',
@@ -12,7 +15,7 @@ db.connect((err) => {
         console.log ("Error on DB connection", err)
         return;
     }
-    console.log ("connected to Task DB")
+    console.log ("connected to Task DB");
 
 })
 

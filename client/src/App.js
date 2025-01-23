@@ -1,51 +1,49 @@
+import React, { useState, useEffect } from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import "./App.css";
-import ToDoList from "./component/ToDoList/ToDoList";
-import {ToDoListDB} from "./component/ToDoListDB/ToDoListDB";
+import { ToDoListDB } from "./component/ToDoListDB/ToDoListDB";
 import AddTask from "./component/AddTask/AddTask";
-import { useState } from "react";
-// import Login from './component/Login/Login';
-
-/**
- * function test1(a,b,c) {
- *  console.log(a,b,c)
- * }
- * 
- * test1(a=1,b=2,c=3)
- */
+import { Form, Col, Row, Button } from "react-bootstrap";
+import SignUp from "./component/SignUp/SignUp";
+import HomePage from "./component/HomePage/HomePage";
+import Login from "./component/Login/Login";
 
 function App() {
   const [formData, setFormData] = useState({ tasks: "" });
   const [task, setTask] = useState([]);
+  const [user, setUser] = useState("");
 
   return (
-    <>
-      <h1> React Main Component</h1>
-      <AddTask formData={formData} setFormData={setFormData} setTask={setTask} />
-      <ToDoListDB task={task} setTask={setTask} />
-
-      {/* <AddTask />
-      <ToDoListDB /> */}
-      {/* <Login/> */}
-    </>
+    <Routes>
+      <Route path="/" element={<Login />}></Route>
+      <Route path="/SignUp" element={<SignUp />}></Route>
+      <Route
+        path="/HomePage"
+        element={<ToDoListDB task={task} setTask={setTask} />}></Route>
+    </Routes>
   );
 }
+//     <div className="App container-fluid app-container">
+//       <div>
+//         <h1>React To-DO List</h1>
+//         {user ? (
+//           <>
+//             <h2>Welcome,{user.userName}</h2>
+//             <AddTask
+//               formData={formData}
+//               setFormData={setFormData}
+//               setTask={setTask}
+//             />
+//             <ToDoListDB task={task} setTask={setTask} />
+//           </>
+//         ) : (
+//           // <LoginDB/>
+//           <h1>Hello</h1>
+//         )}
+
+//       </div>
+//     </div>
+//   );
+// }
 
 export default App;
-
-{
-  /* <Router>
-      <div className="App container-fluid app-container">
-        <header className="App-header container-fluid">
-          <NavBar />
-        </header>
-
-        <main>
-          <Routes>
-            <Route path="/TODOLIST" element={<ToDoListDB/>} />
-            <Route path="/TODOLIST" element={<AddTask/>} />
-            <Route path="/Login" element={<Login/>} />
-          </Routes>
-        </main>
-      </div>
-    </Router> */
-}
