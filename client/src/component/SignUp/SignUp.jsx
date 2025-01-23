@@ -25,14 +25,14 @@ function SignUp() {
   const handleSubmit = (event) => {
     event.preventDefault();
     console.log("HS-SIGNUP")
-    // setErrors(SignUpDB(values));
+    setErrors(SignUpDB(values));
     if (values.name && values.email && values.password) {
       axios
         .post("http://localhost:3002/signup/", values)
         .then((res) => {
           if(res.status === 200){
-            console.log ("Success!!");
-            navigate("/");
+            console.log ("SUCCESS!!");
+            navigate("/Login");
           } 
         })
         .catch((err) => console.log(err));

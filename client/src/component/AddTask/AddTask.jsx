@@ -1,19 +1,20 @@
 import React, { useEffect, useState } from "react";
-import { Button, Form, Container } from "react-bootstrap";
-import Col from "react-bootstrap/Col";
-import Row from "react-bootstrap/Row";
+import { Button, Form, Container, Row, Col, Table } from "react-bootstrap";
 import axios from "axios";
 import { fetchList } from "../ToDoListDB/ToDoListDB.jsx";
+import "bootstrap-icons/font/bootstrap-icons.css";
+import 'bootstrap/dist/css/bootstrap.min.css';
 
-export default function AddTask({ formData, setFormData, setTask }) {
-  // const [formData, setFormData] = useState ({
-  //     tasks:'',
-  // });
+export default function AddTask({ setTask}) {
+  const [formData, setFormData] = useState ({
+      tasks:'',
+  });
 
   useEffect(() => {
     const loadData = async () => {
       const loadedTask = await fetchList();
       setTask(loadedTask);
+      console.log (loadedTask);
     };
 
     const timer = setTimeout(() => {
@@ -55,18 +56,20 @@ export default function AddTask({ formData, setFormData, setTask }) {
         <Form noValidate onSubmit={handleSubmit}>
           <Row className="mb-3">
             <Form.Group as={Col} md="4" controlId="validationCustom01">
-              <Form.Label>Task</Form.Label>
+              
               <Form.Control
                 required
                 type="text"
                 name="tasks"
-                placeholder="Add Your Task"
+                placeholder="What Do I need to Do?"
                 value={formData.tasks}
                 onChange={handleChange}
               />
             </Form.Group>
           </Row>
-          <Button type="submit">Submit form</Button>
+          <Button 
+          className="add-button"
+            type="submit">Add to List</Button>
         </Form>
       </Container>
     </>

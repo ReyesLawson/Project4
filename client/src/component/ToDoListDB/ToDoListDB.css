@@ -1,0 +1,11 @@
+.delete-button {
+    padding-right: 25px !important;
+    margin: 3px;
+    margin-left: 5px;
+    color: rgb(20, 19, 16) !important;
+    border: none !important;
+  }
+  .complete{
+    text-decoration: line-through;
+  color: rgb(107, 104, 104);
+  }

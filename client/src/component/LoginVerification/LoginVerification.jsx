@@ -1,5 +1,5 @@
 
-function LoginVerification(values) {
+export function LoginVerification(values) {
     let error = {};
     const emailPattern =/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
     const passwordPattern = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
@@ -20,5 +20,4 @@ function LoginVerification(values) {
     return error;
   }
 
-  export default LoginVerification;
   

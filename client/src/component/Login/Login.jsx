@@ -4,7 +4,7 @@ import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Link } from "react-router-dom";
-import LoginVerification from "../LoginVerification/LoginVerification";
+import {LoginVerification} from "../LoginVerification/LoginVerification"
 
 function Login() {
   const [values, setValues] = useState({
@@ -26,15 +26,10 @@ function Login() {
   const handleSubmit = (event) => {
     event.preventDefault();
     console.log("handleSubmit - LOGIN");
-    // const validationErrors = LoginVerification(values);
-    // setErrors(validationErrors);
+    setErrors(LoginVerification(values));
     if (values.email && values.password) {
       axios
         .post("http://localhost:3002/login/", values)
-        // .post("http://localhost:3002/login/", {
-        //   email: "reyes.lawson@gmail.com",
-        //   password: "12345678",
-        // })
         .then((res) => {
           // if (res.data === "Good Login") {
           if (res.status === 200) {

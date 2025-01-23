@@ -7,6 +7,7 @@ import { Form, Col, Row, Button } from "react-bootstrap";
 import SignUp from "./component/SignUp/SignUp";
 import HomePage from "./component/HomePage/HomePage";
 import Login from "./component/Login/Login";
+import NavBar from "./component/NavBar/Navbar";
 
 function App() {
   const [formData, setFormData] = useState({ tasks: "" });
@@ -14,13 +15,26 @@ function App() {
   const [user, setUser] = useState("");
 
   return (
-    <Routes>
-      <Route path="/" element={<Login />}></Route>
-      <Route path="/SignUp" element={<SignUp />}></Route>
-      <Route
-        path="/HomePage"
-        element={<ToDoListDB task={task} setTask={setTask} />}></Route>
-    </Routes>
+    <container>
+      <div className="APP">
+        <NavBar />
+        <Routes>
+          <Route path="/NavBar" element={<NavBar />}></Route>
+          <Route path="/" element={<Login />}></Route>
+          <Route path="/SignUp" element={<SignUp />}></Route>
+          <Route
+            path="/HomePage"
+            element={
+              <>
+                <AddTask setTask={setTask} />
+                <ToDoListDB task={task} setTask={setTask} />
+                
+              </>
+            }
+          />
+        </Routes>
+      </div>
+    </container>
   );
 }
 //     <div className="App container-fluid app-container">
@@ -29,11 +43,11 @@ function App() {
 //         {user ? (
 //           <>
 //             <h2>Welcome,{user.userName}</h2>
-//             <AddTask
-//               formData={formData}
-//               setFormData={setFormData}
-//               setTask={setTask}
-//             />
+// <AddTask
+//   formData={formData}
+//   setFormData={setFormData}
+//   setTask={setTask}
+// />
 //             <ToDoListDB task={task} setTask={setTask} />
 //           </>
 //         ) : (
