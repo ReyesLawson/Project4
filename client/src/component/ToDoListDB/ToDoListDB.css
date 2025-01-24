@@ -1,10 +1,10 @@
 .delete-button {
     padding-right: 25px !important;
     margin: 3px;
-    margin-left: 5px;
     color: rgb(20, 19, 16) !important;
     border: none !important;
     background-color: transparent!important;
+    
   }
   .mark-button{
     padding-right: 25px !important;
@@ -13,6 +13,14 @@
     color: rgb(20, 19, 16) !important;
     border: none !important;
     background-color: transparent!important;
+    
+  }
+  .main-container-todo{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    width: 100%;
+
   }
   .complete{
     text-decoration: line-through;
@@ -23,11 +31,12 @@
     margin: auto;
     justify-content: center !important; 
     color: rgb(0, 0, 0);
-    border-radius: 35px;
+    
     background-color: transparent;
-    padding: 0;
+    padding:0;
     list-style-type: none;
     display: flex;
+
   }
 li{
   width: 500px;
@@ -38,7 +47,7 @@ li{
     padding-top: 35px;
     display: flex;
     justify-content: center;
-    padding-left:40px;
+    
   }
   .input-container {
     padding-top: 35px;
@@ -48,14 +57,14 @@ li{
     margin-bottom: 5px;
     align-items: center;
     justify-content: center;
-    
     gap: 10px;
     flex-direction: column;
     width: 100% !important;
     
   }
-  .container-fluid{
+  .container-fluid-todo{
     align-items: center;
+    width: 100%;
   }
   .input-box {
     border-color: rgb(0, 0, 0) !important;
@@ -63,31 +72,11 @@ li{
     max-width: 400px;
     padding: 10px;
   }
-  @media (max-width: 768px) {
-    .to-do-list {
-      padding: 25px;
-    }
-  }
-    @media (max-width: 750px) {
-      .list-Container {
-        width: calc(250px * 3 + 4em);
-        margin: auto;
-        padding-top: 20px;
-        columns: 1;
-      }
-    }
-    @media (max-width: 450px) {
-      .list-Container {
-        width: calc(200px * 1 + 4em);
-        margin: auto;
-        padding-top: 20px;
-        columns: 1;
-      }
-      
-  }
+
+ 
   .footer {
-    background-color: #cfcaca;
-    color: white;
+    background-color: #f8f9fa;
+    color: rgb(0, 0, 0);
     position: relative;
     font-size: 20px;
     padding-bottom: 20px;
@@ -95,10 +84,23 @@ li{
     position: fixed;
     left: 0px;
     bottom: 0px;
-    height: 40px;
+    margin: 0;
     width: 100%;
     text-align: center;
-    padding-top: 0;
+    
+    justify-content: center;
+    height: 40px;
+  
+  }
+  @media (max-width: 576px) {
+    .footer.social_media a {
+      font-size: 18px;
+    }
+  }
+  @media (max-width: 250px) {
+    .footer.social_media a {
+      font-size: 18px;
+    }
   }
   .bi-alarm {
     color: rgb(0, 0, 0) !important;

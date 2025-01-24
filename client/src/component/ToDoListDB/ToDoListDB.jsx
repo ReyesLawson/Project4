@@ -45,17 +45,17 @@ export const ToDoListDB = ({ task, setTask }) => {
 
   return (
     <>
-   
-      <Container className="container-fluid ">
+    <div className="main-container-todo"> 
+      <Container className="container-fluid-todo ">
         <div className="to-do-list">
-          <Form>
+          {/* <Form>
             <div className="">
             <tr>
               <h2></h2>
             </tr>
             </div>
-          </Form>
-          <div className="task-containeer">
+          </Form> */}
+          <div className="task-container">
             <ol>
               {task.map((item) => {
                 return (
@@ -82,7 +82,7 @@ export const ToDoListDB = ({ task, setTask }) => {
           </div>
         </div>
       </Container>
-     
+      </div>
       <footer className="footer container-fluid">
         <div className="row">
           <div className="col-sm-2">&copy;GetEr Done</div>

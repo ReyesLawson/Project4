@@ -15,11 +15,11 @@ const NavBar=() => {
         <Navbar className="container-fluid">
           <Container>
             <Navbar.Brand href="#home">
-            <i class="bi bi-pencil"></i>
+            <i className="bi bi-pencil"></i>
             </Navbar.Brand>
             <Nav className="me-auto">
               <Nav.Link href="/">Login</Nav.Link>
-              <NavLink to="/Homepage" className="nav-link">
+              <NavLink to="" className="nav-link">
                 Contact Us
               </NavLink>
               {/* <NavLink to="/contactpage" className="nav-link">

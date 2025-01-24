@@ -57,7 +57,7 @@ export default function AddTask({ setTask}) {
       <Container className="container-fluid input-container-at" >
         <h1 className="allura-regular at-header"> Add New Task </h1>
         <Form noValidate onSubmit={handleSubmit}>
-          <div className="mb-3 input-box">
+          <div className=" input-box">
             <Form.Group className="input-box-at"controlId="validationCustom01">
               
               <Form.Control
