@@ -3,7 +3,6 @@ import taskRouts from "./Routes/tasks.js";
 import cors from "cors";
 import db from "./dbConnection.js";
 
-
 const app = express();
 app.use(express.json());
 
@@ -15,13 +14,13 @@ app.post("/login", (req, res) => {
   console.log(req.body);
   const { email, password } = req.body;
   const sql =
-  "SELECT * FROM todolistmanager.login WHERE email = ? AND password = ?";
+    "SELECT * FROM todolistmanager.login WHERE email = ? AND password = ?";
   db.query(sql, [email, password], (err, data) => {
     if (err) {
       return res.status(500).json({ message: "error in the Query" });
     }
     if (data.length > 0) {
-      return res.status(200).json({recordsFound: data });
+      return res.status(200).json({ recordsFound: data });
       // return res.status(200).json({ allTasks: res.body.tasks });
 
       // return res.json ("Good Login");
@@ -43,7 +42,7 @@ app.post("/signup", (req, res) => {
       return res.status(201).json({ message: "Data Inserted Successfully" });
     }
   });
-})
+});
 
 app.post("/ContactForm", (req, res) => {
   const { name, email, message } = req.body;
@@ -56,7 +55,6 @@ app.post("/ContactForm", (req, res) => {
       return res.status(500).json({ message: "error in the Query" });
     } else {
       return res.status(201).json({ message: "Data Inserted Successfully" });
-      
     }
   });
 });
