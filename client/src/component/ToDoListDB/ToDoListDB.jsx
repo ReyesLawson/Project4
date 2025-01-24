@@ -5,7 +5,6 @@ import "./ToDoListDB.css";
 import "bootstrap-icons/font/bootstrap-icons.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 
-
 export const fetchList = async () => {
   try {
     const response = await axios.get("http://localhost:3002/tasks/");
@@ -45,43 +44,46 @@ export const ToDoListDB = ({ task, setTask }) => {
 
   return (
     <>
-    <div className="main-container-todo"> 
-      <Container className="container-fluid-todo ">
-        <div className="to-do-list">
-          {/* <Form>
+      <div className="main-container-todo">
+        <Container className="container-fluid-todo ">
+          <div className="to-do-list">
+            {/* <Form>
             <div className="">
             <tr>
               <h2></h2>
             </tr>
             </div>
           </Form> */}
-          <div className="task-container">
-            <ol>
-              {task.map((item) => {
-                return (
-                  <li className="d-flex" key={item.taskid}>
-                    <span className={`${item.status === "complete" ? "complete" : ""} me-auto`}>
-                    {item.tasks}
-                    </span> 
-                    <Button
-                      className="mark-button"
-                      type="text"
-                      onClick={() => handlemarked(item.status, item.taskid)}>
-                      <i className="bi bi-check-circle-fill fs-2"></i>
-                    </Button>
-                    <Button
-                      className="delete-button"
-                      type="text"
-                      onClick={() => handleDelete(item.taskid)}>
-                      <i className="bi bi-trash fs-2"></i>
-                    </Button>
-                  </li>
-                );
-              })}
-            </ol>
+            <div className="task-container">
+              <ol>
+                {task.map((item) => {
+                  return (
+                    <li className="d-flex" key={item.taskid}>
+                      <span
+                        className={`${
+                          item.status === "complete" ? "complete" : ""
+                        } me-auto`}>
+                        {item.tasks}
+                      </span>
+                      <Button
+                        className="mark-button"
+                        type="text"
+                        onClick={() => handlemarked(item.status, item.taskid)}>
+                        <i className="bi bi-check-circle-fill fs-2"></i>
+                      </Button>
+                      <Button
+                        className="delete-button"
+                        type="text"
+                        onClick={() => handleDelete(item.taskid)}>
+                        <i className="bi bi-trash fs-2"></i>
+                      </Button>
+                    </li>
+                  );
+                })}
+              </ol>
+            </div>
           </div>
-        </div>
-      </Container>
+        </Container>
       </div>
       <footer className="footer container-fluid">
         <div className="row">
