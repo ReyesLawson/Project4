@@ -1,9 +1,10 @@
 export function SignUpDB(values) {
   let error = {};
-  const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+  const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/
+
   const passwordPattern = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
   console.log ("Email pattern:", emailPattern);  
-
+  console.log ("Password pattern:", passwordPattern)
   if (values.name === "") {
     error.name = "Please enter Name";
   }

@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 import {LoginVerification} from "../LoginVerification/LoginVerification"
 import "./Login.css"
 
-function Login() {
+function Login({setUser}) {
   const [values, setValues] = useState({
     email: "",
     password: "",
@@ -31,9 +31,11 @@ function Login() {
     if (values.email && values.password) {
       axios
         .post("http://localhost:3002/login/", values)
-        .then((res) => {
+        .then((res) => { console.log (res)
           // if (res.data === "Good Login") {
           if (res.status === 200) {
+            console.log('user: ', res.data.recordsFound[0].name)
+            setUser(res.data.recordsFound[0].name);
             console.log("SUCCESS!!");
             navigate("/HomePage");
           } else {
@@ -101,3 +103,19 @@ function Login() {
 }
 
 export default Login;
+
+
+/**
+ * walmart: {
+ *    gardeCenter: {
+ *      pr: {
+ *        h: [
+ *              {name: test1, status: wow},
+ *              {name: test2, status: lame}
+ *         ]
+ *      }
+ *    }
+ * }
+ * 
+ * walmart.gardenCenter.pr.h[1].name
+ */

@@ -1,0 +1,30 @@
+.signup-container{
+    width: 800px;
+    background-color: rgb(97, 138, 192) !important;
+    align-items: center;
+    justify-content: center;
+    min-width: 250px;
+    max-height: 800px;
+    height: 500px
+   
+}
+.signup-header{
+    text-decoration: solid;
+    font-size: 50px;
+    text-decoration: underline;
+}
+.main-container{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+} 
+p{
+    text-align: center;
+    font-size: 1rem;
+
+}
+
+.login-button{
+    background-color:rgb(4, 55, 85);
+    border-color: rgb(255, 250, 250);
+}

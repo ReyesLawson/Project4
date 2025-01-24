@@ -59,8 +59,8 @@ export const ToDoListDB = ({ task, setTask }) => {
             <ol>
               {task.map((item) => {
                 return (
-                  <li key={item.taskid}>
-                    <span className={`${item.status === "complete" ? "complete" : ""}`}>
+                  <li className="d-flex" key={item.taskid}>
+                    <span className={`${item.status === "complete" ? "complete" : ""} me-auto`}>
                     {item.tasks}
                     </span> 
                     <Button

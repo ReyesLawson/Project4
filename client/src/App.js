@@ -10,24 +10,28 @@ import Login from "./component/Login/Login";
 import NavBar from "./component/NavBar/Navbar";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
+import ContactForm from "./component/ContactForm/ContactForm";
 
 function App() {
   const [formData, setFormData] = useState({ tasks: "" });
   const [task, setTask] = useState([]);
   const [user, setUser] = useState("");
 
+  // useEffect(() => {
+  //     console.log('user -- APP:', user);
+  //   }, [user]);
+
   return (
-    
-      
       <div className="App container-fluid app-container">
         <header className="App-header container-fluid">
-          <NavBar />
+          <NavBar user={user}/>
         </header>
         <main>
           <Routes>
-            <Route path="/NavBar" element={<NavBar />}></Route>
-            <Route path="/" element={<Login />}></Route>
+            <Route path="/ContactForm" element={<ContactForm/>}></Route>
+            <Route path="/" element={<Login setUser={setUser}/>}></Route>
             <Route path="/SignUp" element={<SignUp />}></Route>
+
             <Route
               path="/HomePage"
               element={

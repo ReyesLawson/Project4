@@ -5,7 +5,9 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { SignUpDB } from "../SignUpDB/SignUpDB";
 import axios from "axios";
 import "./SignUp.css";
-function SignUp() {
+
+
+export default function SignUp() {
   const [values, setValues] = useState({
     name: "",
     email: "",
@@ -13,7 +15,7 @@ function SignUp() {
   });
   const navigate = useNavigate();
 
-  const [errors, setErrors] = useState([]);
+  const [errors, setErrors] = useState({});
 
   const handleInput = (event) => {
     console.log("handleInput - SignUp")
@@ -30,12 +32,15 @@ function SignUp() {
       axios
         .post("http://localhost:3002/signup/", values)
         .then((res) => {
-          if(res.status === 200){
-            console.log ("SUCCESS!!");
-            navigate("/Login");
+          console.log("Response:", res);
+          if (res.status === 201){
+            console.log("Success!");
+            navigate("/");
           } 
         })
         .catch((err) => console.log(err));
+    } else {
+      console.log("Please fill all the fields.")
     }
   };
 
@@ -50,7 +55,7 @@ function SignUp() {
               <strong>Name</strong>
             </label>
             <input
-              type="name"
+              type="text"
               placeholder="Enter Name"
               name="name"
               className="form-control rounded-0"
@@ -110,4 +115,3 @@ function SignUp() {
   );
 }
 
-export default SignUp;
