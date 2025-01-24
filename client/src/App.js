@@ -17,35 +17,33 @@ function App() {
   const [task, setTask] = useState([]);
   const [user, setUser] = useState("");
 
-  // useEffect(() => {
-  //     console.log('user -- APP:', user);
-  //   }, [user]);
+  const logout = () => {
+    setUser("");
+  }
 
   return (
-      <div className="App container-fluid app-container">
-        <header className="App-header container-fluid">
-          <NavBar user={user}/>
-        </header>
-        <main>
-          <Routes>
-            <Route path="/ContactForm" element={<ContactForm/>}></Route>
-            <Route path="/" element={<Login setUser={setUser}/>}></Route>
-            <Route path="/SignUp" element={<SignUp />}></Route>
+    <div className="App container-fluid app-container">
+      <header className="App-header container-fluid">
+        <NavBar user={user} logout={logout}/>
+      </header>
+      <main>
+        <Routes>
+          <Route path="/ContactForm" element={<ContactForm />}></Route>
+          <Route path="/" element={<Login setUser={setUser} />}></Route>
+          <Route path="/SignUp" element={<SignUp />}></Route>
 
-            <Route
-              path="/HomePage"
-              element={
-                <>
-                  <AddTask setTask={setTask} />
-                  <ToDoListDB task={task} setTask={setTask} />
-                </>
-              }
-            />
-          </Routes>
-        </main>
-      </div>
-      
-    
+          <Route
+            path="/HomePage"
+            element={
+              <>
+                <AddTask setTask={setTask} />
+                <ToDoListDB task={task} setTask={setTask} />
+              </>
+            }
+          />
+        </Routes>
+      </main>
+    </div>
   );
 }
 
