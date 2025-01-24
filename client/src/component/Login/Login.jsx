@@ -105,17 +105,3 @@ function Login({setUser}) {
 export default Login;
 
 
-/**
- * walmart: {
- *    gardeCenter: {
- *      pr: {
- *        h: [
- *              {name: test1, status: wow},
- *              {name: test2, status: lame}
- *         ]
- *      }
- *    }
- * }
- * 
- * walmart.gardenCenter.pr.h[1].name
- */
