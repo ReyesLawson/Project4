@@ -47,14 +47,14 @@ function Login() {
   };
 
   return (
-    <main>
-    <div className="d-flex justify-content-center align-items-center bg-primary  login-container">
-      <div className="p-3 bg white w-25">
-        <h1>Login</h1>
+    <div className="main-login-container">
+    <div className="d-flex justify-content-center align-items-center bg-primary vh-50 login-container">
+      <div className="">
+        <h1 className="head-login">Login</h1>
         <Form onSubmit={handleSubmit}>
           <div className="mb-3">
             <label htmlFor="email">
-              <strong>Email</strong>
+              <h2>Email</h2>
             </label>
             <input
               type="email"
@@ -70,13 +70,13 @@ function Login() {
           </div>
           <div className="mb-3">
             <label htmlFor="password">
-              <strong>Password</strong>
+              <h2>Password</h2>
             </label>
             <input
               type="password"
               placeholder="Enter Password"
               name="password"
-              className="form-control rounded-0"
+              className="form-control rounded-0 login-email-container"
               onChange={handleInput}
             />
 
@@ -96,7 +96,7 @@ function Login() {
         </Form>
       </div>
     </div>
-    </main>
+    </div>
   );
 }
 

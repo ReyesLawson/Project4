@@ -18,7 +18,7 @@ function App() {
 
   return (
     <container>
-      <div className="APP">
+      <div className="App container-fluid app-container">
         <header className="App-header container-fluid">
           <NavBar />
         </header>

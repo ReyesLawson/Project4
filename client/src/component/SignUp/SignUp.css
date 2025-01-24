@@ -1,16 +1,19 @@
-.login-container{
+.signup-container{
     width: 800px;
     background-color: rgb(97, 138, 192) !important;
     align-items: center;
     justify-content: center;
+    min-width: 250px;
+    max-height: 800px;
+    height: 500px
    
 }
-h1{
+.signup-header{
     text-decoration: solid;
     font-size: 50px;
     text-decoration: underline;
 }
-main{
+.main-container{
     align-items: center;
     justify-content: center;
     display: flex;

@@ -54,11 +54,11 @@ export default function AddTask({ setTask}) {
 
   return (
     <>
-      <Container className="input-container" >
-        <h1 className="allura-regular "> Add New Task </h1>
+      <Container className="container-fluid input-container-at" >
+        <h1 className="allura-regular at-header"> Add New Task </h1>
         <Form noValidate onSubmit={handleSubmit}>
-          <Row className="mb-3 input-box">
-            <Form.Group className="input-box"controlId="validationCustom01">
+          <div className="mb-3 input-box">
+            <Form.Group className="input-box-at"controlId="validationCustom01">
               
               <Form.Control
               className="form-input-text"
@@ -70,8 +70,8 @@ export default function AddTask({ setTask}) {
                 onChange={handleChange}
               />
             </Form.Group>
-          </Row>
-          <Row>
+          </div>
+          <Row className="input-container-at">
             <Button 
           className="add-button"
             type="submit">Add to List</Button>

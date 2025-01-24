@@ -45,6 +45,7 @@ export const ToDoListDB = ({ task, setTask }) => {
 
   return (
     <>
+   
       <Container className="container-fluid ">
         <div className="to-do-list">
           <Form>
@@ -81,6 +82,7 @@ export const ToDoListDB = ({ task, setTask }) => {
           </div>
         </div>
       </Container>
+     
       <footer className="footer container-fluid">
         <div className="row">
           <div className="col-sm-2">&copy;GetEr Done</div>

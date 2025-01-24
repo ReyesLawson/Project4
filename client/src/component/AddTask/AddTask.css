@@ -1,17 +1,24 @@
-h1 {
+.at-header {
     align-items: center;
     margin: 0;
     justify-content: center;
-    display: flex;
     padding-top: 20px;
     padding-bottom: 20px;
     color: #000000 !important;
-    .allura-regular {
-      font-family: "Allura", serif !important;
-      font-weight: 400;
-      font-style: normal;
-      width: 400px;
-    } 
+    ;
+}
+
+.allura-regular {
+    font-family: "Allura", serif !important;
+    font-size: 83px;
+    font-style: normal;
+    width: 500px;
+    
+  } 
+.at-container{
+    align-items: center !important;
+    justify-content: center !important;
+    display: flex;
 }
 .add-button{
     padding-right: 25px !important;
@@ -22,20 +29,24 @@ h1 {
     background-color:#000000;
     align-items: center;
     justify-content: center;
+    width:300px;
+    display: flex;
   }
-.input-container{
-    align-items: center !important;
+.input-container-at{
+    padding-top: 35px;
+    padding-bottom: 15px;
     margin: auto;
-    justify-content: center !important; 
-    display: flex;
-    width: 400px;
+    margin-bottom: 5px;
+    align-items: center;
+    justify-content: center;
+    width:400px
 }
-.input-box{
-    align-items: center !important;
+.input-box-at{
+    align-items: center;
     margin: auto;
-    justify-content: center !important; 
+    justify-content: center;
     display: flex;
-    width: 400px;
+    width:400px
 }
 @media (max-width: 768px) {
     .to-do-list {

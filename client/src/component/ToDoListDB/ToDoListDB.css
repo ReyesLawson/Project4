@@ -36,25 +36,28 @@ li{
     text-align: center;
     margin-top: 20px;
     padding-top: 35px;
+    display: flex;
+    justify-content: center;
+    padding-left:40px;
   }
   .input-container {
-    background-color: t#fcfcfc !important;
     padding-top: 35px;
     padding-bottom: 15px;
-    display: flex;
+    display: flex ;
     margin: auto;
     margin-bottom: 5px;
     align-items: center;
     justify-content: center;
-    display: flex;
+    
     gap: 10px;
     flex-direction: column;
-    width: 100%;
+    width: 100% !important;
     
   }
-
+  .container-fluid{
+    align-items: center;
+  }
   .input-box {
-    /* border: 3px solid; */
     border-color: rgb(0, 0, 0) !important;
     width: 100%;
     max-width: 400px;
@@ -80,11 +83,7 @@ li{
         padding-top: 20px;
         columns: 1;
       }
-      @media (max-width: 576px) {
-        .footer.social_media a {
-          font-size: 18px;
-        }
-      }
+      
   }
   .footer {
     background-color: #cfcaca;

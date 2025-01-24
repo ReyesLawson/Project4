@@ -40,10 +40,10 @@ function SignUp() {
   };
 
   return (
-    <main>
-    <div className="d-flex justify-content-center align-items-center bg-primary vh-100 login-container">
-      <div className="p-3 bg white w-25">
-        <h1>Sign Up</h1>
+    <div className="main-container">
+    <div className="d-flex justify-content-center align-items-center bg-primary vh-100 signup-container">
+      <div className="">
+        <h1 className="signup-header">Sign Up</h1>
         <Form onSubmit={handleSubmit}>
           <div className="mb-3">
             <label htmlFor="text">
@@ -106,7 +106,7 @@ function SignUp() {
         </Form>
       </div>
     </div>
-    </main>
+    </div>
   );
 }
 
