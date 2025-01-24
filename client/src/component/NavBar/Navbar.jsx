@@ -15,7 +15,7 @@ const NavBar=() => {
         <Navbar className="container-fluid">
           <Container>
             <Navbar.Brand href="#home">
-              <i className="bi bi-alarm"></i>
+            <i class="bi bi-pencil"></i>
             </Navbar.Brand>
             <Nav className="me-auto">
               <Nav.Link href="/">Login</Nav.Link>
@@ -25,7 +25,7 @@ const NavBar=() => {
               {/* <NavLink to="/contactpage" className="nav-link">
                 Contact Us
               </NavLink> */}
-              <Nav.Link onClick={handleShow}>Pick your List</Nav.Link>
+              
             </Nav>
           </Container>
         </Navbar>

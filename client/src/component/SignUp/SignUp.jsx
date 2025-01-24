@@ -4,7 +4,7 @@ import { Button, Form } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { SignUpDB } from "../SignUpDB/SignUpDB";
 import axios from "axios";
-
+import "./SignUp.css";
 function SignUp() {
   const [values, setValues] = useState({
     name: "",
@@ -40,7 +40,8 @@ function SignUp() {
   };
 
   return (
-    <div className="d-flex justify-content-center align-items-center bg-primary vh-100">
+    <main>
+    <div className="d-flex justify-content-center align-items-center bg-primary vh-100 login-container">
       <div className="p-3 bg white w-25">
         <h1>Sign Up</h1>
         <Form onSubmit={handleSubmit}>
@@ -93,11 +94,11 @@ function SignUp() {
               <span className="text-danger"> {errors.password} </span>
             )}
           </div>
-          <Button type="submit" className="btn btn-success w-100 rounded-0">
+          <Button type="submit" className="btn btn-success w-100 rounded-0 login-button">
             <strong>Sign Up</strong>
           </Button>
           <div>
-            I agree to terms and conditions
+           <p>I agree to terms and conditions</p> 
             <Link to="/" className="btn btn-outline-secondary w-100 rounded-0">
               <strong>Login In</strong>
             </Link>
@@ -105,6 +106,7 @@ function SignUp() {
         </Form>
       </div>
     </div>
+    </main>
   );
 }
 

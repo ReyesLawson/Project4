@@ -4,6 +4,7 @@ import axios from "axios";
 import { fetchList } from "../ToDoListDB/ToDoListDB.jsx";
 import "bootstrap-icons/font/bootstrap-icons.css";
 import 'bootstrap/dist/css/bootstrap.min.css';
+import "./AddTask.css";
 
 export default function AddTask({ setTask}) {
   const [formData, setFormData] = useState ({
@@ -49,15 +50,18 @@ export default function AddTask({ setTask}) {
     setFormData({ ...formData, [name]: value });
   };
 
+
+
   return (
     <>
-      <Container>
-        <h1> Add New Task </h1>
+      <Container className="input-container" >
+        <h1 className="allura-regular "> Add New Task </h1>
         <Form noValidate onSubmit={handleSubmit}>
-          <Row className="mb-3">
-            <Form.Group as={Col} md="4" controlId="validationCustom01">
+          <Row className="mb-3 input-box">
+            <Form.Group className="input-box"controlId="validationCustom01">
               
               <Form.Control
+              className="form-input-text"
                 required
                 type="text"
                 name="tasks"
@@ -67,39 +71,16 @@ export default function AddTask({ setTask}) {
               />
             </Form.Group>
           </Row>
-          <Button 
+          <Row>
+            <Button 
           className="add-button"
             type="submit">Add to List</Button>
+          </Row>
+          
         </Form>
       </Container>
     </>
   );
 }
-{
-  /* <Button
-                type="submit"
-                className="need-todo-button"
-                onClick={incomplete}>
-                {state.showIncomplete ? "Show All" : " Show Incomplete"}
-              </Button> */
-}
 
-{
-  /* //   <Form noValidate onSubmit={handleSubmit}>
-      //   <Row className="mb-3">
-      //     <Form.Group as={Col} md="4" controlId="validationCustom01">
-      //       <Form.Label>Add Task</Form.Label>
-      //       <Form.Control
-              required
-              type="text"
-              placeholder="What needs to be done?"
-              defaultValue=""
-            />
-            
-          </Form.Group>
-        </Row>
-        
-        <Button type="Submit">Submit</Button>
-        <Button type="Show Incomplete">Show Incomplete</Button>
-      </Form> */
-}
+

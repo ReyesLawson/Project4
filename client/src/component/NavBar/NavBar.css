@@ -1,0 +1,47 @@
+.offcanvas-body {
+    background-color: #3e4c6c;
+    height: 100px;
+  }
+  .offcanvas-header {
+    background-color: #3e4c6c;
+    border-color: rgb(251, 206, 70) !important;
+    border: 5px solid;
+  }
+  .nav-list-buttons {
+    background-color: rgb(251, 206, 70) !important;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+    border-radius: 35px;
+    border-color: rgb(68, 171, 215) !important;
+    justify-content: center;
+    margin-top: 15px;
+    align-items: center;
+    color: #3e4c6c;
+    font-weight: bold;
+  }
+  .offcanvas-title {
+    color: rgb(251, 206, 70) !important;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    font-weight: bold;
+    font-size: 35px;
+    align-items: center;
+    margin: auto;
+    justify-content: center;
+    display: flex;
+    font-weight: bold !important;
+    padding-left: 55px;
+  }
+  
+  .nav-link {
+    color: rgb(14, 1, 1);
+  }
+  .navbar-brand {
+    color: rgb(14, 0, 0);
+  }
+  .offcanvas-buttons {
+    font-size: 15px !important;
+  }
+  

@@ -5,6 +5,7 @@ import "./ToDoListDB.css";
 import "bootstrap-icons/font/bootstrap-icons.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 
+
 export const fetchList = async () => {
   try {
     const response = await axios.get("http://localhost:3002/tasks/");
@@ -44,32 +45,25 @@ export const ToDoListDB = ({ task, setTask }) => {
 
   return (
     <>
-      <Container className="container-fluid list-Container">
+      <Container className="container-fluid ">
         <div className="to-do-list">
-          <h1>To Do List !</h1>
           <Form>
+            <div className="">
             <tr>
-              <th>Task ID</th>
-              <th>Tasks</th>
+              <h2></h2>
             </tr>
+            </div>
           </Form>
-          <div className="input-container">
+          <div className="task-containeer">
             <ol>
               {task.map((item) => {
                 return (
                   <li key={item.taskid}>
-                    {/* 
-                    - add the update/change status button/checkbox,
-                    - use taskid for id
-                    - tie the handle marked to this update button/checkbox
-                    - create strike through on word
-                    
-                    */}
                     <span className={`${item.status === "complete" ? "complete" : ""}`}>
                     {item.tasks}
                     </span> 
                     <Button
-                      className="mark"
+                      className="mark-button"
                       type="text"
                       onClick={() => handlemarked(item.status, item.taskid)}>
                       <i className="bi bi-check-circle-fill fs-2"></i>

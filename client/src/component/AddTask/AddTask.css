@@ -1,0 +1,65 @@
+h1 {
+    align-items: center;
+    margin: 0;
+    justify-content: center;
+    display: flex;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    color: #000000 !important;
+    .allura-regular {
+      font-family: "Allura", serif !important;
+      font-weight: 400;
+      font-style: normal;
+      width: 400px;
+    } 
+}
+.add-button{
+    padding-right: 25px !important;
+    margin: 3px;
+    margin-left: 5px;
+    color: rgb(255, 254, 253) !important;
+    border: none !important;
+    background-color:#000000;
+    align-items: center;
+    justify-content: center;
+  }
+.input-container{
+    align-items: center !important;
+    margin: auto;
+    justify-content: center !important; 
+    display: flex;
+    width: 400px;
+}
+.input-box{
+    align-items: center !important;
+    margin: auto;
+    justify-content: center !important; 
+    display: flex;
+    width: 400px;
+}
+@media (max-width: 768px) {
+    .to-do-list {
+      padding: 25px;
+    }
+  }
+    @media (max-width: 750px) {
+      .list-Container {
+        width: calc(250px * 3 + 4em);
+        margin: auto;
+        padding-top: 20px;
+        columns: 1;
+      }
+    }
+    @media (max-width: 450px) {
+      .list-Container {
+        width: calc(200px * 1 + 4em);
+        margin: auto;
+        padding-top: 20px;
+        columns: 1;
+      }
+      @media (max-width: 576px) {
+        .footer.social_media a {
+          font-size: 18px;
+        }
+      }
+  }

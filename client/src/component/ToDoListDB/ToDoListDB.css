@@ -4,8 +4,114 @@
     margin-left: 5px;
     color: rgb(20, 19, 16) !important;
     border: none !important;
+    background-color: transparent!important;
+  }
+  .mark-button{
+    padding-right: 25px !important;
+    margin: 3px;
+    margin-left: 5px;
+    color: rgb(20, 19, 16) !important;
+    border: none !important;
+    background-color: transparent!important;
   }
   .complete{
     text-decoration: line-through;
   color: rgb(107, 104, 104);
+  }
+  .list-Container{
+    align-items: center !important;
+    margin: auto;
+    justify-content: center !important; 
+    color: rgb(0, 0, 0);
+    border-radius: 35px;
+    background-color: transparent;
+    padding: 0;
+    list-style-type: none;
+    display: flex;
+  }
+li{
+  width: 500px;
+}
+  .to-do-list {
+    text-align: center;
+    margin-top: 20px;
+    padding-top: 35px;
+  }
+  .input-container {
+    background-color: t#fcfcfc !important;
+    padding-top: 35px;
+    padding-bottom: 15px;
+    display: flex;
+    margin: auto;
+    margin-bottom: 5px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+    width: 100%;
+    
+  }
+
+  .input-box {
+    /* border: 3px solid; */
+    border-color: rgb(0, 0, 0) !important;
+    width: 100%;
+    max-width: 400px;
+    padding: 10px;
+  }
+  @media (max-width: 768px) {
+    .to-do-list {
+      padding: 25px;
+    }
+  }
+    @media (max-width: 750px) {
+      .list-Container {
+        width: calc(250px * 3 + 4em);
+        margin: auto;
+        padding-top: 20px;
+        columns: 1;
+      }
+    }
+    @media (max-width: 450px) {
+      .list-Container {
+        width: calc(200px * 1 + 4em);
+        margin: auto;
+        padding-top: 20px;
+        columns: 1;
+      }
+      @media (max-width: 576px) {
+        .footer.social_media a {
+          font-size: 18px;
+        }
+      }
+  }
+  .footer {
+    background-color: #cfcaca;
+    color: white;
+    position: relative;
+    font-size: 20px;
+    padding-bottom: 20px;
+    padding-top: 4px;
+    position: fixed;
+    left: 0px;
+    bottom: 0px;
+    height: 40px;
+    width: 100%;
+    text-align: center;
+    padding-top: 0;
+  }
+  .bi-alarm {
+    color: rgb(0, 0, 0) !important;
+    font-size: 20px;
+  }
+  
+  .bi-envelope {
+    color: rgb(0, 0, 0) !important;
+  }
+  .bi-facebook {
+    color: rgb(0, 0, 0) !important;
+  }
+  .bi-messenger {
+    color: rgb(0, 0, 0) !important;
   }

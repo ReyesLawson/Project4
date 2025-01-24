@@ -5,6 +5,7 @@ import { useNavigate } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Link } from "react-router-dom";
 import {LoginVerification} from "../LoginVerification/LoginVerification"
+import "./Login.css"
 
 function Login() {
   const [values, setValues] = useState({
@@ -46,7 +47,8 @@ function Login() {
   };
 
   return (
-    <div className="d-flex justify-content-center align-items-center bg-primary">
+    <main>
+    <div className="d-flex justify-content-center align-items-center bg-primary  login-container">
       <div className="p-3 bg white w-25">
         <h1>Login</h1>
         <Form onSubmit={handleSubmit}>
@@ -82,10 +84,10 @@ function Login() {
               <span className="text-danger"> {errors.password} </span>
             )}
           </div>
-          <Button type="submit" className="btn btn-success w-100 rounded-0">
+          <Button type="submit" className="btn btn-success w-100 rounded-0 login-button">
             <strong>Login</strong>
           </Button>
-          I agree to terms and conditions
+         <p>I agree to terms and conditions</p> 
           <Link
             to="/signup"
             className="btn btn-outline-secondary w-100 rounded-0">
@@ -94,6 +96,7 @@ function Login() {
         </Form>
       </div>
     </div>
+    </main>
   );
 }
 
