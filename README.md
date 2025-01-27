@@ -39,43 +39,7 @@ This is a simple ToDo List application built with React on the frontend and Node
 
 ## State Tree
 App State
-│
-├── user (String)
-│   └── Represents the currently logged-in user. (e.g., "John Doe" or "")
-│
-├── task (Array)
-│   └── Array of task objects.
-│       └── Each task has:
-│           ├── taskid (Number)           - Unique identifier for the task.
-│           ├── tasks (String)           - Description of the task.
-│           ├── status (String)          - Task status (e.g., 'Pending', 'Completed').
-│           └── any other task-specific properties (like priority, due date, etc.)
-│
-├── formData (Object)
-│   └── Holds form data for task, login, and contact form submission.
-│       ├── tasks (String)              - Task description input.
-│       ├── name (String)               - Name input (e.g., for contact form or signup).
-│       ├── email (String)              - Email input (e.g., for login or contact form).
-│       ├── message (String)            - Message input (e.g., for contact form).
-│       └── password (String)           - Password input (e.g., for login or signup).
-│
-├── errors (Object)
-│   └── Stores validation errors for the forms.
-│       ├── name (String)               - Error message for 'name' (e.g., "Name is required").
-│       ├── email (String)              - Error message for 'email' (e.g., "Email is invalid").
-│       ├── message (String)            - Error message for 'message' (e.g., "Message cannot be empty").
-│       ├── password (String)           - Error message for 'password' (e.g., "Password is too short").
-│       └── any other form-specific error messages.
-│
-└── contactForm (Object)
-    └── Represents the state related to the contact form.
-    └── name (String)           - The user's name entered in the contact form.
-    └── email (String)          - The user's email entered in the contact form.
-    └── message (String)        - The message entered in the contact form.
-    └── errors (Object)         - Stores errors specific to the contact form.
-        └── name (String)       - Error message for contact form 'name'.
-        └── email (String)      - Error message for contact form 'email'.
-        └── message (String)    - Error message for contact form 'message'.
+│![alt text](<./client/public/images/state tree.png>)
 
 
 ## Wireframes / Screenshots
